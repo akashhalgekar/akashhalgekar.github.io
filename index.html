@@ -6,8 +6,13 @@
 <title>Akash Halgekar | Program and Operations</title>
 <meta name="description" content="Akash Halgekar: program and operations manager focused on new product introduction, implementation and process improvement.">
 <meta property="og:title" content="Akash Halgekar | Program and Operations">
-<meta property="og:description" content="I take new products from plan to production.">
+<meta property="og:description" content="Program, NPI and operations. Case studies, live projects and results from real work.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://akashhalgekar.github.io/">
+<meta property="og:image" content="https://akashhalgekar.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f3efe7">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23141414'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='34' fill='%23ff5b1f'>a</text></svg>">
 <script>if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("anim")</script>
@@ -81,8 +86,6 @@ h1 .serif{font-size:1.08em;color:var(--accent)}
 /* ---------- sections ---------- */
 section{padding:110px 0}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.kicker::before{content:"";width:18px;height:1.5px;background:var(--accent)}
 h2{font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.03em;font-weight:600}
 h2 .serif{color:var(--accent)}
 .sec-head p{max-width:34ch;color:var(--muted)}
@@ -114,13 +117,17 @@ h2 .serif{color:var(--accent)}
 .arrow svg{width:16px;height:16px}
 .tile:hover .arrow{background:var(--accent);border-color:var(--accent);color:#fff;transform:rotate(-45deg)}
 
-/* ---------- numbers ---------- */
-.numbers{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
-.num{padding:34px 24px 30px;border-right:1px solid var(--line)}
-.num:last-child{border-right:0}
-.num b{display:block;font-size:clamp(40px,4.6vw,60px);line-height:1;letter-spacing:-.04em;font-weight:600}
-.num b em{font-family:var(--serif);font-weight:400;color:var(--accent);margin-right:.06em}
-.num > span{display:block;margin-top:10px;font-size:14px;color:var(--muted);max-width:22ch}
+/* ---------- highlight ---------- */
+.highlight{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;width:100%;text-align:left;padding:36px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.highlight b{font-size:clamp(48px,6vw,76px);line-height:1;letter-spacing:-.04em;font-weight:600;white-space:nowrap}
+.highlight b em{font-family:var(--serif);font-weight:400;color:var(--accent);margin-right:.06em}
+.hl-text{font-size:18px;color:var(--ink2);max-width:46ch}
+.hl-link{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;white-space:nowrap}
+.hl-link svg{width:16px;height:16px;transition:transform .25s}
+.highlight:hover .hl-link{color:var(--accent)}
+.highlight:hover .hl-link svg{transform:translateX(4px)}
+.highlight:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.contact-sub{margin-top:20px;font-size:18px;color:#b9b3a8;position:relative}
 
 /* ---------- about bento ---------- */
 .about{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
@@ -165,7 +172,6 @@ dialog.nocover .m-body{padding-top:64px}
 /* ---------- contact ---------- */
 .contact{background:var(--dark);color:#f3efe7;border-radius:36px 36px 0 0;padding:110px 0 40px;margin-top:40px;position:relative;overflow:hidden}
 .contact::before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(255,91,31,.35),transparent 65%);pointer-events:none}
-.contact .kicker{color:#9d978c}
 .big{font-size:clamp(52px,9vw,128px);line-height:.95;letter-spacing:-.045em;font-weight:600;position:relative}
 .big .serif{color:var(--accent)}
 .contact-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:48px;position:relative}
@@ -222,9 +228,6 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
   .glance{max-width:560px}
   .w7,.w5,.w4,.tile{grid-column:span 12}
   .w5 .cover{aspect-ratio:16/9;height:auto}
-  .numbers{grid-template-columns:1fr 1fr}
-  .num:nth-child(2){border-right:0}
-  .num:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .c-do,.c-edu{grid-column:span 12}
   .c-tools{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr auto;gap:4px 16px}
@@ -232,6 +235,7 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
   .xrow .mk{display:none}
 }
 @media (max-width:640px){
+  .highlight{grid-template-columns:1fr;gap:12px;padding:28px 0}
   .wrap{padding:0 16px}
   .nav{padding-left:16px}
   .nav ul{display:none}
@@ -243,7 +247,6 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
   .tile-body{padding:18px}
   .tile-links{padding:0 18px 18px}
   .card{padding:24px}
-  .num{padding:26px 16px 24px}
   .xrow{padding:22px 0}
   .xrow:hover{padding-left:0;padding-right:0;background:none}
   .xrow .date{text-align:left;grid-column:1/-1;grid-row:3}
@@ -286,7 +289,7 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 
   <aside class="glance rv d2" aria-label="At a glance">
     <div class="g-row"><span>Looking for</span><b>Program, NPI and operations roles</b></div>
-    <div class="g-row"><span>Experience</span><b>Ekvira · Lear · EY</b></div>
+    <div class="g-row"><span>Experience</span><b>Ekvira · Lear · EY · Siemens</b></div>
     <div class="g-row"><span>Education</span><b>MS Engineering Management, USC</b></div>
     <div class="g-row"><span>Based in</span><b>Los Angeles, open to relocation</b></div>
   </aside>
@@ -295,8 +298,8 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Manufacturing launches</span><span>Supplier operations</span><span>Distribution networks</span><span>Energy and EVs</span><span>Software products</span><span>Consulting engagements</span>
-    <span>Manufacturing launches</span><span>Supplier operations</span><span>Distribution networks</span><span>Energy and EVs</span><span>Software products</span><span>Consulting engagements</span>
+    <span>Manufacturing launches</span><span>Plant floor operations</span><span>Supplier operations</span><span>Distribution networks</span><span>Energy and EVs</span><span>Software products</span><span>Consulting engagements</span>
+    <span>Manufacturing launches</span><span>Plant floor operations</span><span>Supplier operations</span><span>Distribution networks</span><span>Energy and EVs</span><span>Software products</span><span>Consulting engagements</span>
   </div>
 </div>
 
@@ -304,8 +307,8 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker">Selected work</p><h2 class="rv">Seven projects, <span class="serif">real outcomes.</span></h2></div>
-      <p class="rv d1">Tap any project for the full story. Client data stays private, and every number is from the actual work.</p>
+      <div><h2 class="rv">Selected work</h2></div>
+      <p class="rv d1">Tap a project for the details.</p>
     </div>
 
     <div class="bento">
@@ -399,29 +402,29 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
   </div>
 </section>
 
-<!-- NUMBERS -->
+<!-- HIGHLIGHT -->
 <div class="wrap">
-  <div class="numbers">
-    <div class="num rv"><b><em>$</em><span data-count="12.4" data-dec="1">12.4</span>M</b><span>excess working capital sized for a client</span></div>
-    <div class="num rv d1"><b><span data-count="166">166</span>K</b><span>EV charging sessions modeled</span></div>
-    <div class="num rv d2"><b><span data-count="14.2" data-dec="1">14.2</span>M</b><span>rows of ERP data put through a pipeline</span></div>
-    <div class="num rv d3"><b><span data-count="5">5</span></b><span>teams aligned on one bottleneck fix</span></div>
-  </div>
+  <button class="highlight rv" type="button" data-open="ey">
+    <b><em>$</em>12.4M</b>
+    <span class="hl-text">in excess working capital identified for a distribution client, in a business case the client approved and piloted.</span>
+    <span class="hl-link">See the project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+  </button>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker">About</p><h2 class="rv">Engineer by training, <span class="serif">manager by choice.</span></h2></div>
+      <div><h2 class="rv">About</h2></div>
     </div>
     <div class="about">
       <div class="card dark c-do rv">
-        <h3>What I bring to a <span class="serif">team</span></h3>
+        <h3>What I bring</h3>
         <div>
-          <div class="skill"><i>01</i><div><b>Launch coordination</b><p>RFQs, BOM changes, tooling and part approvals, run as one plan.</p></div></div>
-          <div class="skill"><i>02</i><div><b>Process and constraint analysis</b><p>Find where work stalls, then prove it with data.</p></div></div>
-          <div class="skill"><i>03</i><div><b>Clear communication</b><p>White papers and business cases anyone can act on.</p></div></div>
+          <div class="skill"><i>01</i><div><b>Stakeholder management</b><p>Kept toolmakers, the shop floor and customer engineers on one timeline, and aligned five teams behind one bottleneck fix.</p></div></div>
+          <div class="skill"><i>02</i><div><b>Data into decisions</b><p>Turned 14.2M rows of ERP data into a business case a client approved and piloted.</p></div></div>
+          <div class="skill"><i>03</i><div><b>Launch coordination</b><p>RFQs, BOM changes, tooling and part approvals, run as one plan.</p></div></div>
+          <div class="skill"><i>04</i><div><b>Process analysis</b><p>Find where work stalls on the floor, then prove it with data.</p></div></div>
         </div>
       </div>
       <div class="card c-edu rv d1">
@@ -442,12 +445,13 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 <!-- EXPERIENCE -->
 <section id="experience" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><div><p class="kicker">Experience</p><h2 class="rv">Where I've <span class="serif">worked.</span></h2></div></div>
+    <div class="sec-head"><div><h2 class="rv">Experience</h2></div></div>
     <div class="xp">
       <div class="xrow rv"><b>Ekvira</b><p class="role">NPI and Project Coordinator<small>Nashik, India · Full time</small></p><span class="date">2023 to 2024</span><span class="mk"></span></div>
       <div class="xrow rv"><b>Lear Corporation</b><p class="role">Supply Chain and Business Analyst Intern<small>Nashik, India · Hybrid</small></p><span class="date">2023 to 2024</span><span class="mk"></span></div>
       <div class="xrow rv"><b>EY</b><p class="role">Business and Market Analyst Intern<small>Remote · Project based</small></p><span class="date">2022 to 2023</span><span class="mk"></span></div>
       <div class="xrow rv"><b>Ekvira</b><p class="role">Procurement and Supply Chain<small>Nashik, India</small></p><span class="date">2022</span><span class="mk"></span></div>
+      <div class="xrow rv"><b>Siemens</b><p class="role">Supply Chain and Operations Intern<small>Nashik, India · On-site plant</small></p><span class="date">2022</span><span class="mk"></span></div>
     </div>
   </div>
 </section>
@@ -457,8 +461,8 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 <!-- CONTACT -->
 <footer class="contact" id="contact">
   <div class="wrap">
-    <p class="kicker">Contact</p>
-    <p class="big rv">Have a launch to <span class="serif">land?</span><br>Let's talk.</p>
+    <p class="big rv">Let's talk.</p>
+    <p class="contact-sub rv">Open to program, NPI and operations roles. Based in Los Angeles, open to relocation.</p>
     <div class="contact-row rv d1">
       <div class="mail"><a href="mailto:ahalgekarworks@gmail.com">ahalgekarworks@gmail.com</a><button class="copy" type="button" data-email="ahalgekarworks@gmail.com">Copy</button></div>
       <a class="btn light" href="https://www.linkedin.com/in/akash-halgekar-ab184622b/" target="_blank" rel="noopener">LinkedIn</a>
@@ -538,6 +542,7 @@ document.querySelectorAll(".tile .open").forEach(b=>b.addEventListener("click",(
   const t=b.closest(".tile"),l=t.querySelector(".tile-links");
   openModal(CASES[t.dataset.case],t.querySelector(".cover").innerHTML,l?l.innerHTML:"",b);
 }));
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const t=document.querySelector(`.tile[data-case="${b.dataset.open}"]`),l=t.querySelector(".tile-links");openModal(CASES[b.dataset.open],t.querySelector(".cover").innerHTML,l?l.innerHTML:"",b)}));
 const EDU={
   usc:{tag:"Education · 2024 to 2026",title:"MS, Engineering Management",
     lede:"University of Southern California, Viterbi School of Engineering, with coursework at the Marshall School of Business.",
@@ -573,7 +578,7 @@ if(anim){
   setTimeout(()=>{if(!fired)revealAll()},1200);
 }
 /* rotating focus: one element, text swapped in place, so phrases can never stack */
-const words=["new product introduction.","implementation.","process improvement.","cross team communication."];
+const words=["new product introduction.","stakeholder management.","turning data into decisions.","process improvement."];
 const rotEl=document.querySelector(".rot span");let wi=0,busy=false;
 if(anim)setInterval(()=>{if(document.hidden||busy)return;busy=true;rotEl.classList.add("swap");
   setTimeout(()=>{wi=(wi+1)%words.length;rotEl.textContent=words[wi];rotEl.classList.remove("swap");busy=false},320)},2800);
