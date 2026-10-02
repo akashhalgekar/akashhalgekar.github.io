@@ -96,7 +96,7 @@ h2 .serif{color:var(--accent)}
 .tile:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(20,20,20,.35)}
 .open{display:flex;flex-direction:column;flex:1;width:100%;text-align:left}
 .open:focus-visible{outline:3px solid var(--accent);outline-offset:-3px;border-radius:var(--r)}
-.w7{grid-column:span 7}.w5{grid-column:span 5}.w4{grid-column:span 4}
+.w7{grid-column:span 7}.w5{grid-column:span 5}.w4{grid-column:span 4}.w12{grid-column:span 12}.w12 .cover{aspect-ratio:3/1}
 .w5 .cover{flex:1}
 .w4 .open{flex:0 0 auto}
 .tile-links{display:flex;flex-wrap:wrap;gap:8px;padding:0 24px 22px}
@@ -228,6 +228,7 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
   .glance{max-width:560px}
   .w7,.w5,.w4,.tile{grid-column:span 12}
   .w5 .cover{aspect-ratio:16/9;height:auto}
+  .w12 .cover{aspect-ratio:16/9}
   .c-do,.c-edu{grid-column:span 12}
   .c-tools{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr auto;gap:4px 16px}
@@ -312,6 +313,25 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
     </div>
 
     <div class="bento">
+      <div class="tile w12 rv" data-case="sco"><button class="open" type="button">
+        <div class="cover"><svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice"><rect width="1200" height="400" fill="#141414"/>
+          <g font-family="Inter,Arial" font-size="14" font-weight="600" letter-spacing="1.5">
+            <text x="60" y="64" fill="#f3efe7" fill-opacity=".55">SUPPLY CHAIN OPTIMIZATION</text>
+            <rect x="60" y="150" width="200" height="100" rx="12" fill="none" stroke="#f3efe7" stroke-opacity=".5" stroke-width="2"/><text x="160" y="196" text-anchor="middle" fill="#f3efe7" fill-opacity=".8">ERP · WMS · TMS</text><text x="160" y="220" text-anchor="middle" fill="#f3efe7" fill-opacity=".45" font-size="12">MESSY DATA</text>
+            <rect x="330" y="150" width="150" height="100" rx="12" fill="none" stroke="#f3efe7" stroke-opacity=".75" stroke-width="2"/><text x="405" y="196" text-anchor="middle" fill="#f3efe7" fill-opacity=".9">CLEAN</text><text x="405" y="220" text-anchor="middle" fill="#f3efe7" fill-opacity=".45" font-size="12">RECONCILED</text>
+            <rect x="550" y="110" width="300" height="180" rx="14" fill="#1f1f1e" stroke="#f3efe7" stroke-opacity=".4" stroke-width="2"/>
+            <rect x="574" y="132" width="252" height="40" rx="8" fill="#f3efe7" fill-opacity=".14"/><text x="700" y="157" text-anchor="middle" fill="#f3efe7">NETWORK</text>
+            <rect x="574" y="180" width="252" height="40" rx="8" fill="#f3efe7" fill-opacity=".14"/><text x="700" y="205" text-anchor="middle" fill="#f3efe7">PRODUCTION</text>
+            <rect x="574" y="228" width="252" height="40" rx="8" fill="#f3efe7" fill-opacity=".14"/><text x="700" y="253" text-anchor="middle" fill="#f3efe7">SAFETY STOCK</text>
+            <rect x="920" y="150" width="220" height="100" rx="12" fill="#f3efe7"/><text x="1030" y="196" text-anchor="middle" fill="#141414">DECISION</text><text x="1030" y="220" text-anchor="middle" fill="#141414" fill-opacity=".6" font-size="12">TESTED, NOT JUST MODELLED</text>
+          </g>
+          <g fill="none" stroke="#f3efe7" stroke-opacity=".5" stroke-width="2"><path d="M260 200h60M480 200h60"/></g>
+          <path d="M850 200h56" stroke="#ff5b1f" stroke-width="3"/><path d="M898 191l10 9-10 9" fill="none" stroke="#ff5b1f" stroke-width="3"/>
+          <text x="600" y="352" text-anchor="middle" font-family="Inter,Arial" font-size="14" font-weight="600" fill="#ff5b1f" letter-spacing="1.8">KEEP ALL SIX DCs · +0.4% COST · NEXT DAY 68% TO 80%</text>
+        </svg></div>
+        <div class="tile-body"><div><small>Supply chain analytics · Personal build</small><h3>Fixing supply chains</h3></div><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </button><div class="tile-links"><a class="lnk solid" href="supply-chain-architecture.html" target="_blank" rel="noopener">View architecture <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h7v7M13 3L4 12"/></svg></a><a class="lnk ghost" href="https://github.com/akashhalgekar/supply-chain-optimization/blob/main/docs/ONE_PAGE_SUMMARY.md" target="_blank" rel="noopener">One page summary <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h7v7M13 3L4 12"/></svg></a><a class="lnk ghost" href="https://github.com/akashhalgekar/supply-chain-optimization" target="_blank" rel="noopener">Code <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h7v7M13 3L4 12"/></svg></a></div></div>
+
       <div class="tile w7 rv" data-case="npi"><button class="open" type="button">
         <div class="cover"><svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice"><rect width="640" height="360" fill="#ffe6da"/>
           <g font-family="Inter,Arial" font-size="13" font-weight="600" fill="#141414">
@@ -507,6 +527,12 @@ dialog.scrolled .m-bar{background:var(--paper);box-shadow:0 1px 0 var(--line)}
 
 <script>
 const CASES={
+  sco:{tag:"Supply chain analytics · Personal build",title:"Fixing supply chains",
+    lede:"Most supply chain models stop at a number. This one takes messy company data and ends with a decision: which warehouses to run, when plants should produce, and how much stock to hold, with the evidence behind it.",
+    cols:[["How I'm doing it",["Clean: an ETL turns 9,128 messy ERP, WMS and TMS order lines into 84 demand profiles, and stops if the numbers do not reconcile.","Decide: one model picks the distribution centers, one plans production, one sizes safety stock for demand swings and late deliveries.","Test: every combination of distribution centers is costed, nine stress tests are run, and every input is checked against 2026 freight and holding cost benchmarks."]],
+          ["What it found",["The cheapest network closes Chicago, but keeping all six DCs costs only 0.4% more and lifts next day delivery from 68% to 80%.","57% of safety stock exists because trucks arrive late, not because demand swings.","Production runs fall from 168 to 39 over 12 weeks."]]],
+    stats:[["3.7%","below the reference case"],["57%","of safety stock from late deliveries"],["343 / 343","checks passed on 10 other synthetic companies"]],
+    note:"A fictional US drinks company with simulated data, so the numbers show the method, not a real client. Built with an AI assistant, then audited for realism gaps and tested on other synthetic companies. Inspired by a Supply Science case study."},
   npi:{tag:"New product introduction · Ekvira · 2022 to 2024",title:"Launching new components with a production supplier",
     lede:"As NPI and project coordinator at a production supplier serving a large OEM customer, I moved new plastic and trim components from quotation to approved production.",
     cols:[["What I did",["Owned RFQ responses, BOM and engineering change coordination, and PPAP and PQAP submissions.","Kept toolmakers, the shop floor and the customer's engineers aligned on timing through every change.","Priced resin against global polymer and crude linked indices so quotes tracked real input costs."]],
